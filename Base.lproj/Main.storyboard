@@ -665,53 +665,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-cF-huI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-cF-huI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-2A-pJ8">
+                                        <rect key="frame" x="154" y="11" width="66" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="lcv-67-zEH"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-Am-2eH" customClass="FSCalendar">
-                                <rect key="frame" x="6" y="51" width="363" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-Am-2eH" customClass="FSCalendar">
+                                <rect key="frame" x="6" y="51" width="363" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="MjD-kC-Fpv"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="11"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsScopeHandle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsScopeHandle" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useVeryShortWeekdaySymbols" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="54"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderType">
-                                        <integer key="value" value="0"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="subtitleTextSize">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="21"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                        <real key="value" value="50"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleTextSize">
-                                        <real key="value" value="12"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -719,8 +731,69 @@
                                     <outlet property="delegate" destination="8F8-MR-92O" id="NSr-G3-S8G"/>
                                 </connections>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9td-ve-oYY">
+                                <rect key="frame" x="6" y="253" width="363" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UQR-cX-KF2" customClass="ScheduleBookingTableViewCell" customModule="MyMooBan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="363" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UQR-cX-KF2" id="0sx-3A-yT5">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN4-nc-RFz">
+                                                    <rect key="frame" x="15" y="7" width="38" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OU-1a-1CX">
+                                                    <rect key="frame" x="300" y="2" width="44" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Status"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select the slot you wish to book and click on confirm booking" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-br-Uc7">
+                                <rect key="frame" x="6" y="204" width="217" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-yS-6TU">
+                                <rect key="frame" x="246" y="209" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Clear Selection">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-9i-5PQ">
+                                <rect key="frame" x="0.0" y="587" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Confirm Booking">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jaV-cF-huI" secondAttribute="trailing" id="3oJ-bG-ZxS"/>
+                            <constraint firstItem="d9w-b1-2Fe" firstAttribute="trailing" secondItem="QRI-Am-2eH" secondAttribute="trailing" constant="6" id="JT0-eu-Hjb"/>
+                            <constraint firstItem="QRI-Am-2eH" firstAttribute="leading" secondItem="d9w-b1-2Fe" secondAttribute="leading" constant="6" id="PR2-5h-Ctq"/>
+                            <constraint firstItem="jaV-cF-huI" firstAttribute="top" secondItem="ZKG-4K-ZJf" secondAttribute="top" multiplier="1.5" id="asF-sU-xQz"/>
+                            <constraint firstItem="jaV-cF-huI" firstAttribute="leading" secondItem="ZKG-4K-ZJf" secondAttribute="leading" id="qpG-Od-6C1"/>
+                            <constraint firstItem="QRI-Am-2eH" firstAttribute="top" secondItem="jaV-cF-huI" secondAttribute="bottom" constant="8" id="zYm-1r-xzy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d9w-b1-2Fe"/>
                     </view>
                     <connections>
@@ -730,6 +803,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOI-eA-who" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3548" y="1219.3403298350825"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="8gX-yM-ou2">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="D5o-TS-SZ9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRU-eK-dLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4225" y="1219"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G3i-tE-RqY">

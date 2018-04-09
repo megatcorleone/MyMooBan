@@ -12,6 +12,7 @@ import FSCalendar
 
 
 
+
 class FacilitiesBookingViewController: UIViewController
 {
 
@@ -21,6 +22,7 @@ class FacilitiesBookingViewController: UIViewController
     
 
     
+    @IBOutlet weak var calendarHeight: NSLayoutConstraint!
     
 
 
@@ -32,6 +34,8 @@ class FacilitiesBookingViewController: UIViewController
 
 
         calendarView.setScope(FSCalendarScope.week, animated: true)
+
+        
         
     }
 
