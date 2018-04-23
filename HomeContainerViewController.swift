@@ -8,28 +8,26 @@
 
 import UIKit
 
-class HomeContainerViewController: UIViewController {
+
+
+class HomeContainerViewController: UIViewController{
+    
+    
+    
+    @IBAction func sosCall(_ sender: UIButton) {
+        let url : NSURL = URL(string: "TEL://+60175802599")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        print("good")
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

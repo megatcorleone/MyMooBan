@@ -14,7 +14,7 @@ import SkyFloatingLabelTextField
 
 extension SkyFloatingLabelTextField {
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable override var borderColor: UIColor? {
         
         get {
             
@@ -65,7 +65,7 @@ extension SkyFloatingLabelTextField {
     }
     
     
-    @IBInspectable var leftBorderWidth: CGFloat {
+    @IBInspectable override var leftBorderWidth: CGFloat {
         
         get {
             
@@ -96,7 +96,7 @@ extension SkyFloatingLabelTextField {
     
     
     
-    @IBInspectable var bottomBorderWidth: CGFloat {
+    @IBInspectable override var bottomBorderWidth: CGFloat {
         
         get {
             return 0.0
